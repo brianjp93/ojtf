@@ -30,7 +30,7 @@ class HomePage extends Component {
                 </div>
                 <div className="parallax-container" style={{height:400}}>
                     <div className="parallax">
-                        <img src="/images/tennis-courts.jpg" alt=""/>
+                        <img src={`${window.base_url}/images/tennis-courts.jpg`} alt=""/>
                     </div>
                 </div>
                 <div className="container">
@@ -105,7 +105,7 @@ class HomePage extends Component {
 
                 <div className="parallax-container">
                     <div className="parallax">
-                        <img src="/images/tennis2.jpg" alt=""/>
+                        <img src={`${window.base_url}/images/tennis2.jpg`} alt=""/>
                     </div>
                 </div>
 
