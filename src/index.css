@@ -6,3 +6,11 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+.card .card-content .card-title i {
+    line-height: unset;
+}
+
+.modal {
+    max-height: 80%;
+}

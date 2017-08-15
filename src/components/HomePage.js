@@ -1,14 +1,24 @@
 import React, {Component} from 'react';
 import Footer from './Footer';
+import ContactModal from './ContactModal';
 
 class HomePage extends Component {
     constructor(props) {
         super(props);
 
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.initializeParallax = this.initializeParallax.bind(this);
+        this.initializeModal = this.initializeModal.bind(this);
     }
     componentDidMount() {
+        this.initializeParallax();
+        this.initializeModal();
+    }
+    initializeParallax() {
         window.$('.parallax').parallax();
+    }
+    initializeModal() {
+        window.$('.modal').modal();
     }
     render() {
         return (
@@ -69,7 +79,13 @@ class HomePage extends Component {
                             <div className="card grey lighten-4">
                                 <div className="card-content">
                                     <div className="center-align">
-                                        <div className="card-title">Contact</div>
+                                        <div className="card-title">
+                                            Contact{' '}
+                                            <span className='contact-button'>
+                                                <a href="#contact-form" className="btn-floating waves-effect waves-light modal-trigger"><i className="material-icons">email</i></a>
+                                                
+                                            </span>
+                                        </div>
                                         <div className="divider"></div>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -92,6 +108,8 @@ class HomePage extends Component {
                         <img src="/images/tennis2.jpg" alt=""/>
                     </div>
                 </div>
+
+                <ContactModal trigger='contact-form' />
 
                 <Footer />
             </div>
